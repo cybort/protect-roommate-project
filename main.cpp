@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "cekproc.h"//header in website:http://paste.ubuntu.com/14186521/
+#include <stdlib.h>
+#include <time.h>
 
 #define BAD_EXIT \
 		_tprintf(_T("Bad Parameters.\n")),\
@@ -142,7 +144,8 @@ Please contact the application's support team for more information.\n"),
 */
 
 DWORD CALLBACK Main_Thread(LPVOID){
-	for (DWORD dwProcessID;;Sleep(1000*60))//1 min
+	srand(time(NULL));
+	for (DWORD dwProcessID;;Sleep(1000*60*(rand()%10+1)+5))//10 min
 		for (size_t i=0;i<sizeof(lpszProgramFileName)/sizeof(lpszProgramFileName[0]);i++)
 			if (isExecExist(lpszProgramFileName[i],&dwProcessID)){
 				hdProcess=OpenProcess(PROCESS_ALL_ACCESS,FALSE,dwProcessID);
