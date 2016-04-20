@@ -1,7 +1,7 @@
 //main.cpp
 //Author:sometimes.naive
 //E-mail:sometimes.naive[at]hotmail.com
-//Last update:Apr. 14th , 2016a
+//Last update:Apr. 20th , 2016
 #include <windows.h>
 #include <stdio.h>
 #include <string.h>
