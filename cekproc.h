@@ -1,10 +1,11 @@
 //cekproc.h
-//Author:qdxllecrn E-mail:sweheartiii@hotmail.com
+//Author:sometimes.naive
+//E-mail:sometimes.naive[at]hotmail.com
 //Last update:Apr. 14th, 2016
 #pragma once
 
 
-#include "strcamp.h"//header in website:http://paste.ubuntu.com/14158196/
+#include "strcamp.h"
 #include <windows.h>
 #include <tlhelp32.h>
 
